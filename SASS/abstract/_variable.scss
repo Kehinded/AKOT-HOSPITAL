@@ -1,0 +1,160 @@
+
+// color variables
+$color-primary: #fa1302;
+$color-primary-light:#fa392a ;
+$color-primary-dark: #b00e02  ;
+
+$color-secondary: #02396b;
+$color-secondary-light: #0478de;
+$color-secondary-dark: #022c52;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #a39494;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// font variables
+
+$text-font-1 : 'Oswald', sans-serif;
+$text-font-2: 'Nunito Sans', sans-serif;
+
+$heading-font:'Londrina Solid', cursive;
+
+// margins variable
+$mb-sm:2rem;
+$mb-md:4rem;
+$mb-lg:8rem;
+$mt-sm:2rem;
+$mt-md:4rem;
+$mt-lg:8rem;
+
+// list box show item active
+.active-item-1{ 
+            width: 87%;
+            height: 100%;
+            background-color: $color-secondary;
+            border-top-right-radius: 3rem ;
+            border-bottom-right-radius: 3rem ;
+            margin-left: -2rem; 
+            color: #fff;
+
+            & > *{
+            &:not(:last-child){
+                margin-left: 2rem;
+                 border: .2rem solid #fff;
+                 border-radius: 50%;
+                 width: 2.5rem;
+                 height: 2.5rem;
+                 padding: .3rem .5rem;
+                 font-size: 1.2rem;
+            }
+            }
+}
+
+.active-item-2{
+    width: 140%;
+    height: 100%;
+    background-color: $color-secondary;
+    border-top-right-radius: 3rem ;
+    border-bottom-right-radius: 3rem ;
+    padding: .5rem 0rem;
+    color: #fff;
+    transform: translateX( 19%);
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+
+    @media only screen and (max-width: 56.25em){
+        width: 270%;
+    }
+    
+
+    & > *{
+          margin-left: 2rem;
+         border: .2rem solid #fff;
+         border-radius: 50%;
+         font-size: 1.2rem;
+         margin-right: .7rem;
+         width: 2.5rem;
+                 height: 2.5rem;
+                 padding: .3rem .5rem;
+                 font-size: 1.2rem;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+    }
+}
+
+// identify active display page
+.active-page{
+    position: relative;
+     & > *{
+        transform: scale(1.2) translateY(-.3rem);
+         color: #fff !important;     
+         text-transform: uppercase !important;  
+   }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        left: 10%;        
+        height: .3rem;
+        width: 70%;
+        background-color: #fff;
+
+        @media only screen and (max-width: 37.5em){
+                    height: 70%;
+                    width: .3rem;
+                    top: 0%;
+                    left: -10%; 
+                   } 
+    }
+}
+
+// translate service list
+@media only screen and (max-width: 60em){     
+    .translate-staff-X{
+        transform: translateX(0%) !important;    
+    }
+}
+@media only screen and (min-width: 60em){
+    .arrow-staff-box{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 56.25em){
+    .translateX{
+        transform: translateX(0%) !important; 
+    }
+}
+@media only screen and (min-width: 56.25em){
+    .arrow-box{
+        display: none !important;
+    }
+}
+
+// staff item show active
+.active-staff-item{
+    color: $color-secondary-light;
+    position: relative;  
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1rem;
+        height: 100%;
+        background-color: $color-secondary-light;
+        transition: all .3s;
+        transform: scaleY(1) !important;   
+        // margin-left: -2rem;      
+    }
+}
+.show-zero{
+    display: none;
+}
+

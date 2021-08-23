@@ -1,0 +1,14 @@
+{
+  "name": "medical-site",
+  "version": "1.0.0",
+  "description": "medical",
+  "main": "medical.js",
+  "scripts": {
+    "compile:sass" : "node-sass SASS/main.scss CSS/styles.css -w"
+  },
+  "author": "timmy",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

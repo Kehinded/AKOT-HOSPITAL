@@ -1,0 +1,96 @@
+
+.staff-box-1{
+    display: flex;
+    flex-direction: column;
+    font-family: $text-font-2; 
+    color:  rgba(#fff, .9);
+
+    .title-box{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        align-items: center;
+
+        .title{
+            margin-top: 1rem;
+            text-transform: uppercase;  
+            font-weight: 700;
+        }
+    }
+
+    .staff-list{
+        margin-top:2rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        
+
+        .staff-item{
+            text-transform: capitalize;
+            align-self: center;
+            width: 100%;
+            margin-bottom: 3rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;  
+          position: relative;
+          cursor: pointer;
+          transition: all .3s;
+
+          &::after{
+              content: "";
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              width: 1rem;
+              height: 100%;
+              background-color: $color-secondary-light;
+              transition: all .3s;
+              transform:  scaleY(0);    
+          }
+
+            span{
+                margin-top: 1rem;
+            }
+
+            &:hover{
+               color: $color-secondary-light;
+               }
+
+            &:hover::after{
+             transform: scaleY(1);
+            }
+        }
+    }
+
+      .logout-box{
+          text-decoration: none;
+        align-self: center;
+          margin-top: auto;
+          color:  rgba(#fff, .6);
+          
+          .logout{
+            display: flex;
+            align-items: center;  
+  
+            span{
+                margin-left: 1rem;
+                text-transform: capitalize;
+            }
+          }
+
+          &:hover{
+              transform: translateX(-.5rem) scale(1.06);
+              color: #fff;
+          }
+      }
+
+
+}
+
+.staff-box-1-logo{
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+}

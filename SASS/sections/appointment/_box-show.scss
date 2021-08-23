@@ -1,0 +1,183 @@
+.box-show{
+    
+    display: flex;
+    @media only screen and (max-width:32em){
+        flex-direction: column;
+    }
+
+    &-1{
+     flex: 0 0 65%;
+     background-image: linear-gradient(to bottom, rgba($color-secondary-light, .7), 
+     rgba($color-secondary-light, .7)) ,url(/images/med-cat-4.webp);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+
+     display: flex;
+     flex-direction: column;
+     padding-top: 5rem;
+     padding-left: 3vw;
+
+     @media only screen and (max-width:32em){
+         order: 1;  
+         padding: 1rem ;
+        flex: 0 0 60%;
+    }
+
+     .title{
+       height: 35%;
+       width: 70%;
+
+       .text{
+           font-size: 3.5vw;
+           text-transform: capitalize;
+           color: #fff;
+           line-height: 1.1;
+           font-family: $text-font-2;
+           font-weight: 900;
+       }
+     }
+
+     .text-box{
+        height: 20%;
+        display: flex;
+        align-items: center;
+
+        .icon-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem;
+            background-color: $color-primary;
+            border-radius: 50%;
+            height: 4rem;
+            width: 4rem;
+            margin-right: 1rem;
+            @media only screen and (max-width:32em){  
+                height: 3.5rem;
+            width: 3.5rem;
+            }
+
+            .right-icon{  
+                width: 2rem;
+                height: 2rem;
+                fill: #fff;
+                @media only screen and (max-width:32em){  
+                    height: 1.5rem;  
+                width: 1.5rem;  
+                }
+            }
+        }
+
+        .text{
+          color: rgba(#fff, .5);
+          font-family: $text-font-2;
+       width: 70%;
+       font-weight: 700;
+        }
+        
+     }
+
+     .input-search-box{
+         margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        padding: .7rem;
+        background-color: #fff;
+        box-shadow: .3rem .3rem .4rem rgba(#000, .4);
+        border-radius: .3rem;
+        transform: translateX(10%);
+        position: relative;
+        z-index: 100;
+        
+        @media only screen and (max-width:32em){
+            margin-top: 2rem;
+            transform: translateX(0%);
+        }
+
+        .input-group{
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            width: 70%;
+
+            .search-icon{
+                width: 2rem;
+                height: 2rem;
+                fill: #999;
+            }
+            
+            .input{
+                outline: none;
+                border: none;
+                width: 90%;
+                padding: 2%;
+
+                &::placeholder{
+                    text-transform: #999;
+                }
+            }
+        }
+        .search-button{
+            display: block;
+            margin-left: auto;
+            background-color: $color-secondary-dark;
+            color: #fff;
+            text-transform: capitalize;
+            margin-right: 1rem;
+            padding: 1rem 3rem;
+            border-radius: .3rem;
+            transition: all .3s; 
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.06) translateX(-.5rem);
+            }
+        }
+     }
+
+    }
+  
+    // show two box
+    &-2{
+        flex: 1;
+        background-image: url("../../../images/medical-appointment-4.jpeg");   
+        background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover; 
+     position: relative;
+
+     .icon-box{
+         position: absolute;
+         top: 10%;
+         left: 0;
+
+         .book-icon{
+             width: 10rem;
+             height: 10rem;
+             fill: $color-secondary-dark;
+             margin-left: -42%;
+
+             @media only screen and (max-width:32em){
+                margin-left: 0%;
+                width: 6rem; 
+                height: 6rem;   
+            }
+             
+         }
+
+         .book-icon-small{
+            width: 3rem;
+            height: 3rem;
+            fill: #fff;
+            transform: translateY(-150%);  
+
+            @media only screen and (max-width:32em){
+                transform: translateY(-170%) translateX(-250%); 
+                width: 1.5rem;
+                height: 1.5rem;  
+            }
+        }
+     }
+       }
+}

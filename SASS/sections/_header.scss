@@ -1,0 +1,239 @@
+
+.header{
+    grid-row: 1 / span 1;
+    grid-column: full-start / full-end ;
+    background-color: $color-secondary;
+    padding: 2rem 3rem;
+    border-bottom: .1rem solid $color-grey-dark-1;
+    display: flex;
+
+    @media only screen and (max-width: 62.5em){
+     flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width: 37.5em){
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 0rem;
+       }
+
+       & > *{
+       &:not(:last-child){
+        @media only screen and (max-width: 37.5em){
+            margin-bottom: 2rem;
+           }
+       }
+    }
+
+    &__name{
+     display: flex;
+     align-items: center;
+     
+     & > *{
+         margin-right: .5rem;
+     }
+
+     .hospital-name{
+         color: $color-grey-light-1;
+         text-transform: uppercase;
+         font-size: 3rem;
+         font-family: $text-font-1;
+         font-weight: 400;
+         font-style: italic;
+         margin-left: 2rem;
+     }
+    }
+
+    &__logo{
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: $color-grey-light-2;
+    }
+
+    &__list{
+     list-style: none;
+     margin-left: 5rem;
+     display: flex;
+     align-items: center;
+
+     @media only screen and (max-width: 62.5em){
+         justify-content: center;
+     order: 1; 
+     width: 100%;
+     margin-top: 1rem;    
+    }
+    @media only screen and (max-width: 37.5em){
+       align-items: flex-start;
+        flex-direction: column;
+        margin-left: 0rem;
+       }
+
+     .item{
+         margin-left: 1rem;
+         font-family: $text-font-2;
+         padding: 1rem;
+         cursor: pointer;
+         transition: all .3s;  
+         position: relative;
+         
+         &:not(:last-child)::before{
+                content: " ";
+            position: absolute;
+            top: 0%;  
+            right: -5%;        
+            height: 100%;  
+            width: .1rem;
+
+            background-color: rgba(#fff, .6);   
+   
+                @media only screen and (max-width: 37.5em){
+                     display: none;  
+                   }
+            
+             
+        }
+        //  &:not(:last-child){
+        //      border-right: .1rem solid rgba(#fff, .6);
+
+        //      @media only screen and (max-width: 37.5em){
+        //         border-right: none;
+        //         }
+        //  }
+     
+        .link{
+            text-decoration: none;
+            color: rgba(#fff, .6);
+            text-transform: capitalize;
+            font-size: 1.7rem;
+            display: block;
+
+        }
+
+        &:hover{
+           & > *{
+                transform: scale(1.2) translateY(-.3rem);
+                 color: #fff;
+           }
+        }
+     }
+    }
+
+    &__contacts{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 37.5em){
+            justify-content: space-between;
+            width: 100%;
+            }
+
+    }
+
+    &__icon{
+        cursor: pointer;
+        margin: 1rem;
+        width: 2.3rem;
+        height: 2.3rem;
+        overflow: hidden;
+        fill:  rgba(#fff, .6);
+        transition: all .3s;
+
+
+        &:hover{
+            transform: scale(1.2) translateY(-.3rem);
+            fill: #fff;
+        }
+    }
+}
+
+// header menu part
+.header-checkbox{
+    display: none;
+    
+    &:checked ~ .menu-box .menu-line{
+        opacity: 0;
+    }
+
+    &:checked ~ .menu-box::after{
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+    &:checked ~ .menu-box::before{
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    &:checked ~ .header__list .item{
+        display: block;
+    }
+}
+.menu-box{
+    margin-left: 1rem;
+    background-color: #fff;
+    border-radius: .4rem;
+    padding: 1rem; 
+    position: relative;
+    width: 5.5rem;
+    height: 5rem;
+    transition: all .3s;
+    display: none;
+
+    .menu-line{
+        width: 3.5rem;
+        height: .5rem;  
+        background-color: $color-secondary-dark;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+    }
+
+    &::after,
+    &::before{
+     content: "";
+     position: absolute;
+        width: 3.5rem;
+        height: .6rem;
+        transition: all .3s;  
+        background-color: $color-secondary-dark;
+    }
+
+    &::after{
+        top: 70%;
+        left: 20%;
+    }
+    &::before{
+        top: 25%;
+        left: 20%;
+    }
+
+    &:hover{
+        transform: translateY(-.3rem);
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width:37.5em){
+
+    .header__contacts{
+       margin-right: auto;
+            width: 100%;
+    }
+
+    .header__list .item{
+        display: none;
+    }
+
+    .menu-box{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 19em){
+
+    .menu-box{
+        margin-top: 1.5rem;
+    }
+}

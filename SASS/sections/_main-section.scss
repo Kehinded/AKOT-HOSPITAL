@@ -1,0 +1,5 @@
+.main{
+    grid-row: 2 / span 1;
+    grid-column: col-start / col-end ;   
+    min-height: calc(100vh - 10vh);
+}

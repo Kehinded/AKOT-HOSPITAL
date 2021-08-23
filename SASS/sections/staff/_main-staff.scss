@@ -1,0 +1,61 @@
+.main-staff{
+    grid-row: 2 / span 1;
+    grid-column: full-start / full-end ;   
+    padding: 0rem 2rem;      
+    min-height: calc(100vh - 15vh);
+    margin-bottom: 2rem;
+    position: relative;
+    
+    display: flex;
+
+    &>*{  
+        box-shadow: .1rem .1rem .5rem rgba(#000, .1), -.1rem -.1rem .5rem rgba(#000, .1); 
+    }
+
+    @media only screen and (max-width:25em){  
+        padding: 0rem;
+     }  
+
+}
+
+.staff-box-1{
+    flex: 0 0 13%;
+    background-color: rgba(#000, .9);
+    padding: 3rem 0rem;   
+    transition: all .7s;
+
+    @media only screen and (max-width:60em){
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 40vw;
+        height: 100%;
+        transform: translateX(-120%);      
+    } 
+}
+
+
+.staff-box-2{
+    flex: 1;
+    background-color: rgba(#fff, .3);
+}
+
+.arrow-staff-box{
+    order: 1;
+    display: none;
+
+    .arrow-icon{
+        width: 3rem;
+        height: 3rem;
+        fill: #fff; 
+        margin-right: 2rem;
+    }
+
+}
+
+.arrow-staff-box-right{
+
+    @media only screen and (max-width:60em){
+        display: block;   
+    } 
+}

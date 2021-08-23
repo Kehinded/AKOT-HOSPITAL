@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPOINTMENT PAGE</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <!-- font links start -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,900&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+    <!-- font links end -->
+</head>
+<body class="container   patient-body">
+    <!-- header start -->
+    <header class="header">
+        <input type="checkbox" class="header-checkbox" id="header-checkbox">
+
+        <div class="header__name">
+            <svg class="header__logo">
+                <use xlink:href = "./images/sprite.svg#icon-shield"></use>
+            </svg>
+            <svg class="header__logo">
+                <use xlink:href = "./images/sprite.svg#icon-man-woman"></use>
+            </svg>
+            <div class="hospital-name">akot hospital</div>
+        </div>
+        <ul class="header__list">
+            <li class="item"><a href="./index.html" class="link">home</a></li>
+            <li class="item"><a href="./service.html" class="link">services</a></li>
+            <li class="item"><a href="#" class="link">partnerships</a></li>
+            <li class="item"><a href="#" class="link">about us</a></li>
+            <li class="item active-page"><a href="./patient.html" class="link">appointment</a></li>
+        </ul>
+        <div class="header__contacts">
+            <svg class="header__icon">
+                <use xlink:href = "./images/sprite.svg#icon-facebook"></use>
+            </svg>
+            <svg class="header__icon">
+                <use xlink:href = "./images/sprite.svg#icon-twitter"></use>
+            </svg>
+            <svg class="header__icon">
+                <use xlink:href = "./images/sprite.svg#icon-telegram"></use>
+            </svg>
+            <svg class="header__icon">
+                <use xlink:href = "./images/sprite.svg#icon-whatsapp"></use>
+            </svg>
+            <svg class="header__icon">
+                <use xlink:href = "./images/sprite.svg#icon-bell"></use>
+            </svg>
+        </div>
+        <!-- header list menu -->
+        <label class="menu-box" for="header-checkbox">
+            <div class="menu-line"></div> 
+        </label>
+    </header>
+    <!-- header end -->
+    <!-- main start -->
+    <main class="main main-appointment">
+        <!-- box show start -->
+        <div class="box-show">
+            <!-- show 1 start -->
+        <div class="box-show-1">
+         <div class="title">
+             <h2 class="text">let's book your own appointment</h2>
+         </div>
+         <div class="text-box">
+            <div class="icon-box">
+                <svg class="right-icon">  
+                    <use xlink:href = "./images/sprite.svg#icon-arrow-right"></use>
+                   </svg>
+            </div>
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Incidunt quo fuga adipisci illo ipsum.</div>
+         </div>
+         <!-- input search box start -->
+         <div class="input-search-box">
+         <div class="input-group">
+            <svg class="search-icon">
+                <use xlink:href = "./images/sprite.svg#icon-search"></use>
+               </svg>
+            <input type="text" class="input" placeholder="find likely symptoms">
+         </div>
+         <button class="search-button">search</button>
+         </div>
+        </div>  
+        <!-- show 1 end -->
+        <!-- show 2 start -->
+        <div class="box-show-2">
+        <div class="icon-box">
+            <svg class="book-icon book-icon-large">
+                <use xlink:href = "./images/sprite.svg#icon-bookmarks"></use>
+            </svg>
+            <svg class="book-icon book-icon-small">
+                <use xlink:href = "./images/sprite.svg#icon-checkmark"></use>
+            </svg>
+        </div>
+        </div>
+        <!-- end of show 2 -->
+        </div>
+        <!-- box show end -->
+        <!-- form appointment start -->
+        <div class="box-book">
+            <div class="box-book-1">
+                <figure class="box-book-1-a">
+                    <img src="./images/med-cat-1.webp" alt="" class="img">
+                </figure>
+                <figure class="box-book-1-b"><img src="./images/medical-appointment-10.jpeg" alt="" class="img"></figure>
+                <figure class="box-book-1-c"><img src="./images/medical-appointment-8.jpeg" alt="" class="img"></figure>
+                <figure class="box-book-1-d"><img src="./images/medical-appointment-5.jpeg" alt="" class="img"></figure>
+            </div>
+            <!-- box book 2 start -->
+            <div class="box-book-2">
+            <form action="#" class="form">
+                <div class="input-group">
+                    <label for="#" class="form-label">
+                        <svg class="form-icon">
+                            <use xlink:href = "./images/sprite.svg#icon-user"></use>
+                        </svg>
+                    </label>
+                    <input type="text" placeholder="full name" class="form-input first-input">
+                </div>
+            <div class="input-group input-gender-box">
+                <div class="gender-box">
+                    <input type="radio" class="form-input-gender" id="gender-male" name="gender">
+                    <label for="gender-male" class="form-label-gender"> 
+                        <svg class="form-icon">
+                            <use xlink:href = "./images/sprite.svg#icon-man"></use>
+                        </svg><span>male</span>  
+                    </label>
+                </div>
+                <div class="gender-box">
+                    <input type="radio" class="form-input-gender" id="gender-female"  name="gender">
+                    <label for="gender-female" class="form-label-gender">
+                        <svg class="form-icon">
+                            <use xlink:href = "./images/sprite.svg#icon-woman"></use>
+                        </svg><span>female</span> 
+                    </label>
+                </div>
+            </div>
+            <div class="input-group input-group-flex">
+                <textarea name="" id="" cols="10" rows="5" class="form-input form-input-textarea" placeholder="reason for appointment"></textarea>
+            <button class="patient-submit-btn">submit</button>
+            </div>
+            </form>
+            </div>
+          </div>
+    </main>
+    <!-- main end -->
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer__box-1">
+            <div class="footer__items">request proposal</div>
+            <div class="footer__items">come work with us</div>
+            <div class="footer__items">download our app</div>
+            <div class="footer__items">find your needs</div>
+            <div class="footer__items">contact us</div>
+        </div>
+        <div class="footer__box-3">
+            <p class="footer__text">Built by <span>AYENI KEHINDE OLUWATIMILEHIN (AKOT).</span>Thanks for checking our site</p>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="./medical-appointment.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+.staff-content-box{
+    flex: 1;  
+
+    display: flex;
+
+    @media only screen and (max-width:45em){
+        flex-direction: column;
+    } 
+
+    // box one left
+    &-1{
+        flex: 0 0 75%;
+        display: flex;
+        flex-direction: column; 
+        padding-right: 5rem;  
+
+        @media only screen and (max-width:64em){
+            padding-right: 2rem;
+        } 
+
+        @media only screen and (max-width:60em){
+            flex: 0 0 70%; 
+        } 
+        @media only screen and (max-width:45em){
+            margin-bottom: 3rem;  
+            padding-right: 0rem;  
+        } 
+        
+        .title-box{
+            flex: 0 0 10%;
+            display: flex;
+            flex-direction: column;
+            font-family: $text-font-2;
+
+            @media only screen and (max-width:45em){
+                margin: 2rem 0rem;
+            } 
+
+            .welcome-name{
+                color: #000;
+                font-size: 2.5vw;  
+                text-transform: capitalize;
+                font-weight: 700;
+
+                @media only screen and (max-width:40em){  
+                    font-size: 3rem;   
+                 }  
+            }
+            .text{
+                font-size: 1.4rem;
+                color: #999;
+                margin-left: 1rem;
+                letter-spacing: .2rem;
+            }
+        }
+
+        .appointment-box{
+            flex: 1;
+            margin-top: 2rem; 
+            display: flex;
+            flex-direction: column;
+
+            .calendar-app-box{
+                flex: 0 0 15%;
+
+                display: flex;
+
+                @media only screen and (max-width:45em){
+                    margin-bottom: 2rem ;
+                } 
+                .box{
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(min-content, max-content));
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: 1rem;
+                    padding: 0rem 1rem;
+                    font-family: $text-font-2;
+                    align-items: center;
+
+                    .calendar-icon{
+                        width: 2rem;
+                        height: 2rem;
+                        fill: #000;
+                        grid-row: 1 / 2;
+                        grid-column: 1 / 2;
+                        justify-self: end;
+                    }
+
+                    .number-box{
+                        grid-row: 1 / 2;
+                        grid-column: 2 / 3;
+                        display: flex; 
+
+                        .no-1{
+                            font-size: 2.5rem;
+                            color: #000;
+                            font-weight: 700;
+                        }
+                        .no-2{
+                            display: inline;
+                            align-self: flex-end;
+                            margin-left: 1rem; 
+                        }
+                    }
+
+                    .text-cancel{
+                        grid-row: 2 / 3;
+                        grid-column: 2 / 3;
+                        align-self: flex-start;
+                        text-transform: capitalize;
+                        font-size: 1.4rem;
+                       
+                        
+                        @media only screen and (max-width: 75em){
+                          font-size: 1.6rem;  
+                        }
+
+                        @media only screen and (max-width:60em){
+                            grid-column: 1 / 3;
+                        } 
+
+                        @media only screen and (max-width:25em){  
+                            font-size: 1.3rem;  
+                          }  
+                    }
+                    .text-cancel-last{
+                        margin-left: 2rem;  
+                    }
+                }
+            }
+
+            .main-app-box{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .title-date-wrapper{
+                    flex: 0 0 20%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .title{
+                        flex: 0 0 55%;
+                        font-weight: 700;
+                        font-family: $text-font-2;
+                        font-size: 2vw;  
+                        color: #000;
+                        text-transform: capitalize;
+
+                        @media only screen and (max-width:45em){
+                            margin-bottom: 2rem;
+                            font-size: 2.5rem; 
+                        } 
+                    }
+
+                    .day-month-box{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                        border-bottom: .05rem solid rgba(0,0,0, .1);  
+
+                        .date-names{
+                        display: flex;
+                        
+                        .text-date{
+                            padding: 1rem 0rem;  
+                            margin-right: 3rem;
+                            font-weight: 700;
+                            font-family: $text-font-2;
+                            text-transform: capitalize;
+                            letter-spacing: .2rem;
+
+                            &:first-child{
+                                color: #000;
+                            border-bottom: .5rem solid #000;
+                            }
+                        }
+                        } 
+                        .current-date-box{
+                            margin-left: auto;
+                            display: flex;
+                            align-items: center;
+
+                            .date-patient-show{
+                                color: #000;
+                                text-transform: capitalize;
+                                font-weight: 700;
+                                font-family: $text-font-2;
+                            }
+
+                            .arrow-staff-box{
+                                margin-left: 3rem;
+                            
+
+                                & > *{ 
+                                    background-color: #fff;
+                                    padding: .2rem  2rem ; 
+                                    box-shadow: .1rem .1rem .5rem rgba(0,0,0, .1);
+                                }
+
+                                .arrow-right{
+                                    margin-left: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .main-list-patients{
+                    flex: 1;
+                    display: grid;
+                    grid-row-gap: 1.5rem;  
+                    grid-template-rows: repeat(4, minmax(min-content, 1fr));
+
+                   
+                    
+                    .patient-detail-box{
+                        box-shadow: .1rem .1rem .5rem rgba(0,0,0, .1);
+                        background-color: #fff;
+                        border-radius: .7rem; 
+
+                        display: flex; 
+
+                        @media only screen and (max-width:25em){  
+                            font-size: 1.4rem;  
+                          }  
+                        
+                        
+                        & > *{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center; 
+                            font-family: $text-font-2;  
+                        }
+
+                        .time-range-box{
+                            flex: 0 0 27%;  
+
+                            @media only screen and (max-width:60em){
+                                flex: 0 0 20%;
+                            } 
+
+                            @media only screen and (max-width:25em){  
+                                margin-left: .5rem;    
+                              }  
+                        }
+
+                        .patient-img-name-box{
+                            flex: 0 0 30%;    
+                            display: flex;
+                            justify-content: flex-start;
+
+                            @media only screen and (max-width:60em){
+                                flex: 0 0 37%;  
+                            } 
+
+
+                            .img{
+                                width: 4rem;  
+                                height: 4rem;  
+                                border-radius: 50%;
+                                margin-right: 1rem;
+                            }
+
+                            .name{
+                                color: #000;
+                                font-size: 1.8rem;
+                                font-weight: 700;
+                                text-transform: capitalize; 
+
+                                @media only screen and (max-width:25em){  
+                                   font-size: 1.4rem;  
+                                 }  
+                            }
+                        }
+
+                        .cab-box{
+                            flex: 0 0 13%;
+                            
+                            .text{
+                                text-transform: capitalize;
+                            }
+
+                            @media only screen and (max-width:45em){
+                               display: none;
+                            } 
+                        }
+                        .status-dots-box{
+                            flex: 1 ;
+                            display: flex;    
+                            justify-content:space-evenly;
+                             
+                            
+                            .status-box{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-evenly;    
+                                background-color: rgba($color-secondary-light, .1);   
+                                border-radius: .8rem;
+                                padding: .5rem 1.3rem;    
+                                color: $color-secondary-dark;
+                                width: 50%;   
+
+                                @media only screen and (max-width:32em){  
+                                    width: 80%;
+                                 }  
+
+                                .text{
+                                    text-transform: capitalize;
+                                    font-weight: 700;
+                                    margin-left: .6rem;
+                                }
+
+                                .status-icon{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    fill: currentColor;
+                                    
+                                }
+                            }
+                            .status-box-3{
+                                background-color: #000;
+                                color: #fff; 
+                            }
+
+                            .status-box-4{
+                                background-color: #fff;
+                                color: #000;   
+                            }
+
+                            .dot-box{
+                                cursor: pointer;
+                                transition: all .3s;  
+
+                                @media only screen and (max-width:32em){  
+                                    display: none;
+                                 }    
+                                
+                                &:hover{
+                                    transform: scale(1.2);
+                                }
+
+                                .status-icon{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    fill: rgba(0,0,0, .7);      
+                                }    
+                            }    
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // box two right
+    &-2{
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+
+        .patient-proper-detail-box{
+            flex: 0 0 70%;
+            background-color: #fff;
+            box-shadow: .1rem .1rem .5rem rgba(0,0,0, .1), -.1rem -.1rem .5rem rgba(0,0,0, .1); 
+            border-radius: .5rem;   
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            .box-1{
+                flex: 0 0 50%;
+                border-bottom: .05rem solid rgba(0,0,0, .1);
+                display: grid;
+                grid-template-rows: max-content repeat(2, min-content) max-content; 
+                grid-row-gap: 1rem; 
+                padding: 1rem;  
+
+                @media only screen and (max-width:57em){  
+                grid-template-rows: repeat(4, 1fr); 
+                }
+
+                & > *{
+                    justify-self: center;
+                    font-family: $text-font-2;   
+                }
+                
+                .img{
+                    height: 6rem;
+                    width: 6rem;
+                    border-radius: 50%;
+                }
+
+                .name{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    color: #000;
+                }
+
+                .text{
+                    color: #999; 
+                    font-size: 1.2rem;      
+                }
+
+                .icon-box{
+                    display: flex;
+                    justify-content: center;
+
+                    .status-icon{
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        fill: #fff;
+                        background-color: #000;
+                        padding: 1rem 1.2rem; 
+                        border-radius: 1.2rem; 
+
+                        &:not(:last-child){
+                            margin-right: 1.5rem;
+                        }
+                    }
+
+                    .status-icon-2{
+                        background-color: $color-secondary-light;
+                    }
+
+                    .status-icon-3{
+                        background-color: $color-primary-dark;     
+                    }
+                }
+            }
+
+            .box-2{
+                flex: 1;  
+                display: grid;
+                grid-template-rows: repeat(5, min-content);       
+                padding: 1rem 1.5rem;
+                grid-row-gap: 1rem; 
+                text-transform: capitalize;
+
+                @media only screen and (max-width:57em){  
+                    grid-template-rows: repeat(5, 1fr); 
+                    }
+
+                .box-child{
+                    display: flex;
+                    align-self: center;
+                    align-items: center;
+                    color: rgba(0,0,0, .7);
+                    font-size: 1.4rem;
+                    font-family: $text-font-2;
+                    font-weight: 700;
+
+                    span{
+                        margin-left: auto;
+                        font-size: 1.3rem;
+                    }
+
+                    .disease-name{
+                        color: $color-primary-light !important;
+                        font-size: 1.5rem; 
+                    }
+
+                    .title-box-title{
+                        font-size: 1.7rem;
+                        font-weight: 900;
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .inventory-box{
+            flex: 1;  
+            box-shadow: .1rem .1rem .5rem rgba(0,0,0, .1); 
+            border-radius: .5rem;
+            display: grid;
+            grid-template-rows: 1fr;  
+            grid-template-columns: 1fr;
+            
+            .img-box{
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+
+                .img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    display: block; 
+                }
+            }
+        }
+    }
+}

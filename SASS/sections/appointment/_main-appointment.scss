@@ -1,0 +1,39 @@
+.main-appointment{
+    display: flex;
+    flex-direction: column;
+
+    & > *{
+        border-radius: .5rem;
+        box-shadow: .3rem .3rem .4rem rgba(#000, .3);
+        overflow: hidden;
+    }
+
+    @media only screen and (max-width:62.5em){
+        grid-column: full-start / full-end ;
+        padding: 2rem 3rem;
+    }
+    @media only screen and (max-width:32em){  
+        padding: 1rem;
+    }
+}
+
+.box-show{
+    height: 60%;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width:56.25em){
+        height: 50%;
+    }
+}
+
+.box-book{
+    height: 40%;
+    
+    @media only screen and (max-width:56.25em){
+        height: 50%;   
+    }
+}
+
+.patient-body{
+    background-color: #fff;
+}
